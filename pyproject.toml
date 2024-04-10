@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "winprocessreporter"
+version = "0.1.0"
+description = "WinProcess Reporter"
+authors = ["LaunchPad <launchpad001@proton.me>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11,<3.13"
+requests = "^2.31.0"
+pystray = "^0.19.5"
+pillow = "^10.3.0"
+pywin32 = "^306"
+winsdk = "^1.0.0b10"
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.5.0"
+
+[tool.poetry.scripts]
+build = "winprocessreporter.build:install"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
